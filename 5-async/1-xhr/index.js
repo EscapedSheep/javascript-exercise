@@ -8,7 +8,7 @@ function fetchData(url, successCallback, errorCallback) {
       successCallback(xhr.responseText);
     }
     if (xhr.readyState === 4 && (xhr.status < 200 || xhr.status > 299)) {
-      errorCallback(xhr.responseText);
+      errorCallback(xhr);
     }
   };
   xhr.send();
