@@ -1,8 +1,8 @@
 export default function find00OldPerson(collection) {
   // TODO 4: 在这里写实现代码
   const year = new Date().getFullYear();
-  const person = collection.find(person => {
-    return year - person.age >= 2000;
+  const findPerson = collection.find(person => {
+    return year - person.age >= 2000 && year - person.age < 2010;
   });
-  return person.name;
+  return findPerson.name;
 }
